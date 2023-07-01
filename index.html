@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    .container{
+        position: absolute;
+        height: 370px;
+        width: 1150px;
+        border-radius: 20px;
+        background-color: black;
+        display: grid;
+        justify-content: center;
+        padding:50px ;
+        
+        
+        
+    }
+    .calculator{
+        display:flex;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 12px;
+        border: none;
+        background-color:dimgray;
+        border-radius: 15px ;
+    
+         
+        
+    }
+    button{
+        padding: 15px;
+        height: 40px;
+        width: 80px;
+        margin-left: 25px;
+        margin-right: 25px;
+        border: none;
+        font-weight:bold ;
+        background-color:gray;
+        color: whitesmoke;
+        border-radius: 3px;
+        margin: 5px;
+        size: 30px;
+    }
+    button:hover{
+        transition: ease-in-out;
+        background-color: lightgray;
+        cursor: pointer;
+    }
+
+</style>
+<body>
+    <script src="index.js"></script>
+    <script>
+
+function operator (text){
+    document.getElementById('display').value += text;
+}
+
+function PI (number){
+    document.getElementById('display').value += number;
+}
+
+function sin (number){
+document.getElementById('display').value = Math.sin(display.value);
+}
+function tan(number){
+document.getElementById('display').value =  Math.tan(display.value);
+
+}
+function cos(number){
+document.getElementById('display').value = Math.cos(display.value);
+}
+
+function percent(number ){
+ document.getElementById('display').value += number;
+}
+function dataNumber (number){
+    document.getElementById('display').value += number;
+}
+function sqrt(number) {
+    document.getElementById('display').value = Math.sqrt(display.value);
+}
+function log(number){
+document.getElementById('display').value = Math.log(display.value);
+}
+function bracket(number){
+    document.getElementById('display').value += number;
+}
+
+function equal(){
+document.getElementById('display').value = eval(display.value)
+ 
+}
+function reset(){
+    document.getElementById('display').value = "";
+    
+}
+
+    </script>
+    <h1 align="center" > Simple Calculator</h1>
+<div class="container">
+    
+    <div align="center" class="Calculator" style=" padding: 20px;">
+
+        <input id="display" placeholder="0" style="padding: 10px; padding-left: 165px; padding-right: 165px; margin-bottom: 10px; background-color: black; color: whitesmoke; border-radius: 3px; font-size:25px;">
+        <br>
+        <button onclick="radius(Rad)">Rad </button>
+    <button onclick="degrees(Deg)">Deg</button>
+        <button onclick="dataNumber('X!')">x!</button>
+        <button onclick="bracket( '(' )">(</button>
+        <button onclick="bracket( ')' )">)</button>
+        <button onclick="percent('/100')"> %</button>
+        <button onclick="reset()" id="cleardisplay" >CE</button>
+        <br>
+
+        <button onclick="operator(Inv)">Inv</button>
+        <button onclick="sin(sin)">sin</button>
+        <button onclick="ln(In)">In</button>
+        <button style="background-color:rgb(31, 30, 30); color: aliceblue; " onclick="dataNumber('7') ">7</button>
+        <button style="background-color:rgb(31, 30, 30); color: aliceblue; " onclick="dataNumber('8')">8</button>
+        <button style="background-color:rgb(31, 30, 30); color: aliceblue; "  onclick="dataNumber('9')"> 9</button>
+        <button  onclick="dataNumber('+')">+</button>
+        <br>
+        <button onclick="PI('3.142')">PI</button>
+        <button onclick="cos(Cos)">cos</button>
+        <button onclick="log(log)">log</button>
+        <button style="background-color:rgb(31, 30, 30); color: aliceblue; "  onclick="dataNumber('4')">4</button>
+        <button style="background-color:rgb(31, 30, 30); color: aliceblue; "   onclick="dataNumber('5')">5</button>
+        <button style="background-color:rgb(31, 30, 30); color: aliceblue; "  onclick="dataNumber('6')"> 6</button>
+        <button  onclick="dataNumber('*')">x</button>
+        <br>
+        <button onclick="operator(e)">e</button>
+        <button onclick="tan(tan)">tan</button>
+        <button onclick="sqrt('')">v</button>
+        <button style="background-color:rgb(31, 30, 30); color: aliceblue; "  onclick="dataNumber('1')">1</button>
+        <button style="background-color:rgb(31, 30, 30); color: aliceblue; "   onclick="dataNumber('2')">2</button>
+        <button style="background-color:rgb(31, 30, 30); color: aliceblue; " onclick="dataNumber('3')"> 3</button>
+        <button  onclick="dataNumber('-')">-</button>
+        <br>
+        <button onclick="dataNumber()">Ans</button>
+        <button onclick="exp(exp)">EXP</button>
+        <button onclick="operator(xy)">xy</button>
+        <button style="background-color:rgb(31, 30, 30); color: aliceblue; " onclick="dataNumber('0')">0</button>
+        <button style="background-color:rgb(31, 30, 30); color: aliceblue; " onclick="dataNumber('.')">.</button>
+        <button  style="background-color: lightskyblue; color: black;" onclick="equal('=')"> =</button>
+        <button onclick="dataNumber('/')">/</button>
+    </div>  
+    </div>
+</body>
+</html>
